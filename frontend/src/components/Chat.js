@@ -4,7 +4,6 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import {
   TextField,
   Button,
-  Container,
   Paper,
   Typography,
   List,
@@ -46,10 +45,10 @@ const Chat = () => {
           flexDirection: "column",
         }}
       >
-        <Typography variant="h5" align="center" gutterBottom>
-          FlipChat- GenAI Powered Fashion Outfit Generator
+        <Typography variant="h4" align="center" gutterBottom>
+          FlipChat
         </Typography>
-        <div style={{ flex: 1, overflowY: "scroll" }}>
+        <div style={{ flex: 1, overflowY: "auto" }}>
           <List>
             {messages.map((message, index) => (
               <React.Fragment key={index}>
@@ -62,7 +61,7 @@ const Chat = () => {
                     style={{ textAlign: "right" }}
                   />
                   <ListItemIcon
-                    sx={{ marginBottom: 2, marginLeft: 2, marginTop: -1 }}
+                    sx={{ marginBottom: 1, marginLeft: 2,mt:0 }}
                   >
                     <AccountCircleIcon />
                   </ListItemIcon>
