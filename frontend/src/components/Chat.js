@@ -1,59 +1,97 @@
 // import * as React from "react";
-import React, { useState } from 'react';
-import { TextField, Button, Container, Paper, Typography, List, ListItem, ListItemText, Divider } from '@mui/material';
+import React, { useState } from "react";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import {
+  TextField,
+  Button,
+  Container,
+  Paper,
+  Typography,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Divider,
+} from "@mui/material";
 // import Paper from "@mui/material/Paper";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
 
-  const handleSendMessage = () => {
-    if (inputValue.trim() !== '') {
-      setMessages([...messages, inputValue]);
-      setInputValue('');
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleSendMessage();
     }
   };
 
+  const handleSendMessage = () => {
+    if (inputValue.trim() !== "") {
+      setMessages([...messages, inputValue]);
+      setInputValue("");
+    }
+  };
   return (
-    <Container maxWidth="md" style={{ marginTop: '2rem' }}>
-      <Paper elevation={3} style={{ padding: '1rem' }}>
+    <>
+      <Paper
+        elevation={3}
+        style={{
+          padding: "1rem",
+          height: "90vh",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
         <Typography variant="h5" align="center" gutterBottom>
           FlipChat- GenAI Powered Fashion Outfit Generator
         </Typography>
-        <List>
-          {messages.map((message, index) => (
-            <React.Fragment key={index}>
-              <ListItem alignItems="flex-end">
-              {/* <ListItem alignItems="flex-start"> */}
-                <ListItemText primary={message} />
-              </ListItem>
-              <Divider />
-            </React.Fragment>
-          ))}
-        </List>
+        <div style={{ flex: 1, overflowY: "scroll" }}>
+          <List>
+            {messages.map((message, index) => (
+              <React.Fragment key={index}>
+                <ListItem
+                  alignItems="flex-start"
+                  style={{ justifyContent: "flex-end" }}
+                >
+                  <ListItemText
+                    primary={message}
+                    style={{ textAlign: "right" }}
+                  />
+                  <ListItemIcon
+                    sx={{ marginBottom: 2, marginLeft: 2, marginTop: -1 }}
+                  >
+                    <AccountCircleIcon />
+                  </ListItemIcon>
+                </ListItem>
+                <Divider />
+              </React.Fragment>
+            ))}
+          </List>
+        </div>
         <TextField
           label="Type your message"
           variant="outlined"
           fullWidth
           value={inputValue}
           onChange={handleInputChange}
-          style={{ marginTop: '1rem' }}
+          onKeyDown={handleKeyPress}
+          style={{ marginTop: "1rem" }}
         />
         <Button
           variant="contained"
           color="primary"
           fullWidth
           onClick={handleSendMessage}
-          style={{ marginTop: '1rem' }}
+          style={{ marginTop: "1rem" }}
         >
           Send
         </Button>
       </Paper>
-    </Container>
+    </>
   );
 };
 
