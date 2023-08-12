@@ -11,8 +11,9 @@ import {
   ListItemIcon,
   ListItemText,
   Divider,
+  IconButton,
 } from "@mui/material";
-// import Paper from "@mui/material/Paper";
+import SendIcon from '@mui/icons-material/Send';
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -60,9 +61,7 @@ const Chat = () => {
                     primary={message}
                     style={{ textAlign: "right" }}
                   />
-                  <ListItemIcon
-                    sx={{ marginBottom: 1, marginLeft: 2,mt:0 }}
-                  >
+                  <ListItemIcon sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}>
                     <AccountCircleIcon />
                   </ListItemIcon>
                 </ListItem>
@@ -71,24 +70,21 @@ const Chat = () => {
             ))}
           </List>
         </div>
-        <TextField
-          label="Type your message"
-          variant="outlined"
-          fullWidth
-          value={inputValue}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyPress}
-          style={{ marginTop: "1rem" }}
-        />
-        <Button
-          variant="contained"
-          color="primary"
-          fullWidth
-          onClick={handleSendMessage}
-          style={{ marginTop: "1rem" }}
-        >
-          Send
-        </Button>
+
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <TextField
+            label="Enter Your Outfit Requirements"
+            variant="outlined"
+            value={inputValue}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyPress}
+            fullWidth
+            style={{ marginTop: "1rem" }}
+          />
+          <IconButton color="primary" size="large" onClick={handleSendMessage} style={{ marginTop: "1rem" }}>
+            <SendIcon/>
+          </IconButton>
+        </div>
       </Paper>
     </>
   );
