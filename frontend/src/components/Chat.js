@@ -1,5 +1,5 @@
 // import * as React from "react";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import {
   TextField,
@@ -13,12 +13,13 @@ import {
   Divider,
   IconButton,
 } from "@mui/material";
-import SendIcon from '@mui/icons-material/Send';
+import SendIcon from "@mui/icons-material/Send";
+import { UserContext } from "../context/UserContext";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
-
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -31,7 +32,7 @@ const Chat = () => {
 
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      setMessages([...messages, inputValue]);
+      setMessages([...messages, { user: currentUser, message: inputValue }]);
       setInputValue("");
     }
   };
@@ -58,7 +59,7 @@ const Chat = () => {
                   style={{ justifyContent: "flex-end" }}
                 >
                   <ListItemText
-                    primary={message}
+                    primary={message.message}
                     style={{ textAlign: "right" }}
                   />
                   <ListItemIcon sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}>
@@ -81,8 +82,13 @@ const Chat = () => {
             fullWidth
             style={{ marginTop: "1rem" }}
           />
-          <IconButton color="primary" size="large" onClick={handleSendMessage} style={{ marginTop: "1rem" }}>
-            <SendIcon/>
+          <IconButton
+            color="primary"
+            size="large"
+            onClick={handleSendMessage}
+            style={{ marginTop: "1rem" }}
+          >
+            <SendIcon />
           </IconButton>
         </div>
       </Paper>
