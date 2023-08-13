@@ -1,5 +1,6 @@
 // import * as React from "react";
 import React, { useState, useContext } from "react";
+import SmartToyIcon from "@mui/icons-material/SmartToy";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import {
   TextField,
@@ -18,7 +19,7 @@ import { UserContext } from "../context/UserContext";
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const { currentUser} = useContext(UserContext);
+  const { currentUser } = useContext(UserContext);
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
@@ -28,10 +29,15 @@ const Chat = () => {
       handleSendMessage();
     }
   };
-
+  const [flag, setFlag] = useState(true);
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      setMessages([...messages, { user: currentUser, message: inputValue }]);
+      let type = flag === true ? "question" : "answer";
+      setFlag(!flag);
+      setMessages([
+        ...messages,
+        { user: currentUser, message: inputValue, type: type },
+      ]);
       setInputValue("");
     }
   };
@@ -49,25 +55,56 @@ const Chat = () => {
         <Typography variant="h4" align="center" gutterBottom>
           FlipChat
         </Typography>
+        <Divider />
         <div style={{ flex: 1, overflowY: "auto" }}>
           <List>
-            {messages.map((message, index) => (
-              <React.Fragment key={index}>
-                <ListItem
-                  alignItems="flex-start"
-                  style={{ justifyContent: "flex-end" }}
-                >
-                  <ListItemText
-                    primary={message.message}
-                    style={{ textAlign: "right" }}
-                  />
-                  <ListItemIcon sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}>
-                    <AccountCircleIcon />
-                  </ListItemIcon>
-                </ListItem>
-                <Divider />
-              </React.Fragment>
-            ))}
+            {messages
+              .filter((message) => message.user === currentUser)
+              .map((message, index) => {
+                if (message.type === "question") {
+                  return (
+                    <React.Fragment key={index}>
+                      <ListItem
+                        alignItems="flex-start"
+                        style={{
+                          justifyContent: "flex-end",
+                        }}
+                        // sx={{ mt: 5, border: 1, borderRadius: 10 }}
+                      >
+                        <ListItemText
+                          primary={message.message}
+                          style={{ textAlign: "right" }}
+                        />
+                        <ListItemIcon
+                          sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}
+                        >
+                          <AccountCircleIcon />
+                        </ListItemIcon>
+                      </ListItem>
+                      {/* <Divider /> */}
+                    </React.Fragment>
+                  );
+                }
+                return (
+                  <React.Fragment key={index}>
+                    <ListItem
+                      alignItems="flex-start"
+                      // sx={{ mt: 5, border: 1, borderRadius: 10 }}
+                    >
+                      <ListItemIcon
+                        sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}
+                      >
+                        <SmartToyIcon />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={message.message}
+                        style={{ textAlign: "left" }}
+                      />
+                    </ListItem>
+                    <Divider />
+                  </React.Fragment>
+                );
+              })}
           </List>
         </div>
 

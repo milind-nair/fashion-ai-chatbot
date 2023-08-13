@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Paper,
   Button,
@@ -14,6 +14,7 @@ import {
   //   Divider,
 } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import { UserContext } from "../context/UserContext";
 
 const ConversationList = () => {
   const conversations = [
@@ -21,6 +22,13 @@ const ConversationList = () => {
     { name: "User 2" },
     { name: "User 3" },
   ];
+  const { currentUser, setCurrentUser } = useContext(UserContext);
+
+  const userChangeHandler = (conversation) => {
+    let newUser = conversation.name;
+    console.log(currentUser);
+    setCurrentUser(newUser);
+  };
   return (
     <Paper
       elevation={3}
@@ -49,16 +57,27 @@ const ConversationList = () => {
         {conversations.map((conversation, index) => (
           <React.Fragment key={index}>
             <ListItem>
-              <Box sx={{ border: 1 }} width={"100vw"}>
-                <Grid container>
+              <Box width={"100vw"}>
+                <Grid
+                  container
+                  sx={{
+                    border: 1,
+                    borderRadius: "5%",
+                    backgroundColor:
+                      currentUser === conversation.name ? "lightgrey" : "white",
+                  }}
+                >
                   <Grid item xs={10}>
                     <Button
-                      variant="text"
+                      variant={
+                        currentUser === conversation.name ? "text" : "string"
+                      }
                       color="inherit"
                       fullWidth
                       sx={{
                         textTransform: "none",
                       }}
+                      onClick={() => userChangeHandler(conversation)}
                     >
                       <ListItemAvatar>
                         <Avatar
