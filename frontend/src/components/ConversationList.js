@@ -62,9 +62,9 @@ const ConversationList = () => {
                   container
                   sx={{
                     border: 1,
-                    borderRadius: "5%",
+                    borderRadius: "10px",
                     backgroundColor:
-                      currentUser === conversation.name ? "lightgrey" : "white",
+                      currentUser === conversation.name ? "lightblue" : "white",
                   }}
                 >
                   <Grid item xs={10}>
