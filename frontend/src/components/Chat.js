@@ -3,7 +3,6 @@ import React, { useState, useContext } from "react";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import {
   TextField,
-  Button,
   Paper,
   Typography,
   List,
@@ -19,7 +18,7 @@ import { UserContext } from "../context/UserContext";
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const { currentUser, setCurrentUser } = useContext(UserContext);
+  const { currentUser} = useContext(UserContext);
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
