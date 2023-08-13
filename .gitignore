@@ -171,6 +171,8 @@ SOURCE_DOCUMENTS/.DS_Store
 .conda
 .pyup.yml
 .pre-commit-config.yaml
-Acknowledgments.md
+ACKNOWLEDGEMENT.md
+CONTRIBUTING.md
+localGPTUI
 .flake8
 .editorconfig
