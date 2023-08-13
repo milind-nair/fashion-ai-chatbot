@@ -166,3 +166,11 @@ cython_debug/
 #MacOS
 .DS_Store
 SOURCE_DOCUMENTS/.DS_Store
+
+#BackendPush
+.conda
+.pyup.yml
+.pre-commit-config.yaml
+Acknowledgments.md
+.flake8
+.editorconfig

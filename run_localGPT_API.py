@@ -5,6 +5,7 @@ import subprocess
 
 import torch
 from auto_gptq import AutoGPTQForCausalLM
+# from flask_ngrok import run_with_ngrok
 from flask import Flask, jsonify, request
 from langchain.chains import RetrievalQA
 from langchain.embeddings import HuggingFaceInstructEmbeddings
@@ -71,7 +72,7 @@ QA = RetrievalQA.from_chain_type(
 )
 
 app = Flask(__name__)
-
+# run_with_ngrok(app)
 
 @app.route("/api/delete_source", methods=["GET"])
 def delete_source_route():
