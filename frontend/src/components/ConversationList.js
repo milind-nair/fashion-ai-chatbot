@@ -2,14 +2,18 @@ import React from "react";
 import {
   Paper,
   Button,
+  Box,
+  Grid,
   Typography,
   List,
   ListItem,
   ListItemAvatar,
   Avatar,
   ListItemText,
-//   Divider,
+  IconButton,
+  //   Divider,
 } from "@mui/material";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 const ConversationList = () => {
   const conversations = [
@@ -45,23 +49,37 @@ const ConversationList = () => {
         {conversations.map((conversation, index) => (
           <React.Fragment key={index}>
             <ListItem>
-              <Button
-                variant="outlined"
-                color="inherit"
-                fullWidth
-                sx={{
-                  "text-transform": "none",
-                }}
-              >
-                <ListItemAvatar>
-                  <Avatar alt={conversation.name} src={conversation.avatar} />
-                </ListItemAvatar>
-                <ListItemText
-                  primary={conversation.name}
-                  secondary={conversation.status}
-                  style={{ textAlign: "left" }}
-                />
-              </Button>
+              <Box sx={{ border: 1 }} width={"100vw"}>
+                <Grid container>
+                  <Grid item xs={10}>
+                    <Button
+                      variant="text"
+                      color="inherit"
+                      fullWidth
+                      sx={{
+                        textTransform: "none",
+                      }}
+                    >
+                      <ListItemAvatar>
+                        <Avatar
+                          alt={conversation.name}
+                          src={conversation.avatar}
+                        />
+                      </ListItemAvatar>
+                      <ListItemText
+                        primary={conversation.name}
+                        secondary={conversation.status}
+                        style={{ textAlign: "left" }}
+                      />
+                    </Button>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <IconButton sx={{ mt: 1, alignItems: "flex-end" }}>
+                      <VisibilityIcon />
+                    </IconButton>
+                  </Grid>
+                </Grid>
+              </Box>
             </ListItem>
             {/* <Divider /> */}
           </React.Fragment>
