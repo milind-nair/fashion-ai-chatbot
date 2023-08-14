@@ -10,7 +10,7 @@ from nltk import word_tokenize, pos_tag
 
 def main():
 
-    productDf = pd.read_csv('dataset/flipkartProductDataset.csv')
+    productDf = pd.read_csv('C:/Users/GarimaJi/.vscode/nlp/fashion-ai-chatbot/backend/dataset/flipkartProductDataset.csv')
     sql = 'Blue Kurta with black jeans should go well'
     preprocessedSql = sql.lower()
     preprocessedProducts = productDf.applymap(
@@ -50,23 +50,25 @@ def main():
     print("Adjective-Noun Pairs:", adjective_noun_pairs[0])
 
     # Create TF-IDF vectorizer
-    vectorizer = TfidfVectorizer()
-    productVectors = vectorizer.fit_transform(
-        preprocessedProducts['product_category_tree'])
-    query_vector = vectorizer.transform([" ".join(adjective_noun_pairs[0])])
+    # Create TF-IDF vectorizer
+    preprocessedProducts['Combined'] = preprocessedProducts['product_category_tree'].str.cat(
+        preprocessedProducts['product_specifications'], sep=' ')
 
-    # Calculate cosine similarity
-    similarity_scores = cosine_similarity(
-        query_vector, productVectors).flatten()
+    for i in range(len(adjective_noun_pairs)):
+        vectorizer = TfidfVectorizer()
+        productVectors = vectorizer.fit_transform(
+            preprocessedProducts['Combined'].fillna(''))
+        query_vector = vectorizer.transform(
+            [" ".join(adjective_noun_pairs[i])])
+        similarity_scores = cosine_similarity(
+            query_vector, productVectors).flatten()
 
-    # Rank products based on similarity
-    ranked_indices = similarity_scores.argsort()[::-1]
-    ranked_products = [preprocessedProducts['product_name'][i]
-                       for i in ranked_indices]
-
-    # Print ranked products
-    for rank, product in enumerate(ranked_products, start=1):
-        print(f"Rank {rank}: {product}")
+        ranked_indices = similarity_scores.argsort()[::-1]
+        ranked_products = [preprocessedProducts['product_name'][i]
+                           for i in ranked_indices]
+        # Print ranked products
+        for i, (rank, product) in enumerate(zip(range(1, 11), ranked_products[:10]), start=1):
+            print(f"Rank {rank}: {product}")
 
 
 if __name__ == "__main__":
