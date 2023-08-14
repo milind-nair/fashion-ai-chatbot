@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import {
   Paper,
   Button,
@@ -15,20 +15,48 @@ import {
 } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { UserContext } from "../context/UserContext";
+import UserHistoryDialog from "./UserHistoryDialog";
 
 const ConversationList = () => {
   const conversations = [
-    { name: "User 1" },
-    { name: "User 2" },
-    { name: "User 3" },
+    {
+      name: "User 1",
+      history: [
+        "Sample history 1 for User 1",
+        "Sample history 2 for User 1",
+        "Sample history 2 for User 1",
+      ],
+    },
+    {
+      name: "User 2",
+      history: [
+        "Sample history 1 for User 2",
+        "Sample history 2 for User 2",
+        "Sample history 3 for User 2",
+      ],
+    },
+    {
+      name: "User 3",
+      history: [
+        "Sample history 1 for User 3",
+        "Sample history 2 for User 3",
+        "Sample history 3 for User 3",
+      ],
+    },
   ];
+
   const { currentUser, setCurrentUser } = useContext(UserContext);
 
   const userChangeHandler = (conversation) => {
     let newUser = conversation.name;
-    console.log(currentUser);
     setCurrentUser(newUser);
   };
+
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const showHistory = () => {
+    setDialogOpen(true);
+  };
+
   return (
     <Paper
       elevation={3}
@@ -93,7 +121,10 @@ const ConversationList = () => {
                     </Button>
                   </Grid>
                   <Grid item xs={2}>
-                    <IconButton sx={{ mt: 1, alignItems: "flex-end" }}>
+                    <IconButton
+                      sx={{ mt: 1, alignItems: "flex-end" }}
+                      onClick={showHistory}
+                    >
                       <VisibilityIcon />
                     </IconButton>
                   </Grid>
@@ -104,6 +135,17 @@ const ConversationList = () => {
           </React.Fragment>
         ))}
       </List>
+      {dialogOpen && (
+        <UserHistoryDialog
+          history={
+            conversations.filter(
+              (conversation) => conversation.name === currentUser
+            )[0].history
+          }
+          dialogOpen={dialogOpen}
+          setDialogOpen={setDialogOpen}
+        />
+      )}
     </Paper>
   );
 };
