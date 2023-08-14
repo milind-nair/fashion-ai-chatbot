@@ -29,15 +29,21 @@ const Chat = () => {
       handleSendMessage();
     }
   };
-  const [flag, setFlag] = useState(true);
+  // const [flag, setFlag] = useState(true);
   const handleSendMessage = () => {
     if (inputValue.trim() !== "") {
-      let type = flag === true ? "question" : "answer";
-      setFlag(!flag);
+      // let type = flag === true ? "question" : "answer";
+      // setFlag(!flag);
       setMessages([
         ...messages,
-        { user: currentUser, message: inputValue, type: type },
+        { user: currentUser, message: inputValue, type: "question" },
+        {
+          user: currentUser,
+          message: "The AI does not work yet",
+          type: "answer",
+        },
       ]);
+
       setInputValue("");
     }
   };
@@ -69,7 +75,7 @@ const Chat = () => {
                         style={{
                           justifyContent: "flex-end",
                         }}
-                        // sx={{ mt: 5, border: 1, borderRadius: 10 }}
+                        sx={{ mt: 2 }}
                       >
                         <ListItemText
                           primary={message.message}
