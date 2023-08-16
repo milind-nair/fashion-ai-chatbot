@@ -47,7 +47,6 @@ export default function UserHistoryDialog({
   const handleClose = () => {
     setDialogOpen(false);
   };
-  // console.log(history);
 
   return (
     <div>
@@ -68,6 +67,10 @@ export default function UserHistoryDialog({
             {history.map((item, index) => (
               <React.Fragment key={index}>
                 <ListItem>
+                  <ListItemText
+                    primary={index + 1 + ") "}
+                    sx={{ m: 2 }}
+                  ></ListItemText>
                   <ListItemText primary={item.product_name} />
                 </ListItem>
               </React.Fragment>
