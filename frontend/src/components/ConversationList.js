@@ -15,18 +15,19 @@ import {
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { UserContext } from "../context/UserContext";
 import UserHistoryDialog from "./UserHistoryDialog";
-import { conversations } from "../constants";
+import { conversations } from "../constants/constants";
 
 const ConversationList = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
-
+  const [userHistoryView, setUserHistoryView] = useState("");
   const userChangeHandler = (conversation) => {
     let newUser = conversation.name;
     setCurrentUser(newUser);
   };
 
   const [dialogOpen, setDialogOpen] = useState(false);
-  const showHistory = () => {
+  const showHistory = (conversation) => {
+    setUserHistoryView(conversation.name);
     setDialogOpen(true);
   };
   return (
@@ -95,7 +96,7 @@ const ConversationList = () => {
                   <Grid item xs={2}>
                     <IconButton
                       sx={{ mt: 1, alignItems: "flex-end" }}
-                      onClick={showHistory}
+                      onClick={() => showHistory(conversation)}
                     >
                       <VisibilityIcon />
                     </IconButton>
@@ -111,7 +112,7 @@ const ConversationList = () => {
         <UserHistoryDialog
           history={
             conversations.filter(
-              (conversation) => conversation.name === currentUser
+              (conversation) => conversation.name === userHistoryView
             )[0].history
           }
           dialogOpen={dialogOpen}

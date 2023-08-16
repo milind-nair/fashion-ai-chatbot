@@ -1,4 +1,3 @@
-// import * as React from "react";
 import React, { useState, useContext } from "react";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -16,8 +15,8 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { UserContext } from "../context/UserContext";
-import { urlToCall, jsonData } from "../constants";
-import { conversations } from "../constants";
+import { urlToCall, jsonData } from "../constants/constants";
+import { conversations } from "../constants/constants";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
