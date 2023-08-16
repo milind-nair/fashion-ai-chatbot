@@ -1,7 +1,7 @@
-// import * as React from "react";
 import React, { useState, useContext } from "react";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import axios from "axios";
 import {
   TextField,
   Paper,
@@ -15,6 +15,8 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { UserContext } from "../context/UserContext";
+import { urlToCall} from "../constants/constants";
+import { conversations } from "../constants/constants";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -29,22 +31,39 @@ const Chat = () => {
       handleSendMessage();
     }
   };
-  // const [flag, setFlag] = useState(true);
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (inputValue.trim() !== "") {
-      // let type = flag === true ? "question" : "answer";
-      // setFlag(!flag);
-      setMessages([
-        ...messages,
-        { user: currentUser, message: inputValue, type: "question" },
-        {
-          user: currentUser,
-          message: "The AI does not work yet",
-          type: "answer",
-        },
-      ]);
-
+      try {
+        const jsonToSend = {
+          query: inputValue,
+          history: conversations.filter((elem) => elem.name === currentUser)[0]
+            .history,
+        };
+        console.log(jsonToSend);
+        // const result = await makePostRequest(urlToCall, jsonData);
+        const result = await makePostRequest(urlToCall, jsonToSend);
+        const message = result.name;
+        setMessages([
+          ...messages,
+          { user: currentUser, message: inputValue, type: "question" },
+          {
+            user: currentUser,
+            message: message,
+            type: "answer",
+          },
+        ]);
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
       setInputValue("");
+    }
+  };
+  const makePostRequest = async (url, data) => {
+    try {
+      const response = await axios.post(url, data);
+      return response.data;
+    } catch (error) {
+      throw error;
     }
   };
   return (
@@ -87,16 +106,12 @@ const Chat = () => {
                           <AccountCircleIcon />
                         </ListItemIcon>
                       </ListItem>
-                      {/* <Divider /> */}
                     </React.Fragment>
                   );
                 }
                 return (
                   <React.Fragment key={index}>
-                    <ListItem
-                      alignItems="flex-start"
-                      // sx={{ mt: 5, border: 1, borderRadius: 10 }}
-                    >
+                    <ListItem alignItems="flex-start">
                       <ListItemIcon
                         sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}
                       >

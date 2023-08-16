@@ -1,15 +1,11 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import { List, ListItem, ListItemText } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -22,7 +18,6 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 
 function BootstrapDialogTitle(props) {
   const { children, onClose, ...other } = props;
-
   return (
     <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
       {children}
@@ -52,7 +47,6 @@ export default function UserHistoryDialog({
   const handleClose = () => {
     setDialogOpen(false);
   };
-  console.log(history);
 
   return (
     <div>
@@ -73,7 +67,11 @@ export default function UserHistoryDialog({
             {history.map((item, index) => (
               <React.Fragment key={index}>
                 <ListItem>
-                  <ListItemText primary={item} />
+                  <ListItemText
+                    primary={index + 1 + ") "}
+                    sx={{ m: 2 }}
+                  ></ListItemText>
+                  <ListItemText primary={item.product_name} />
                 </ListItem>
               </React.Fragment>
             ))}
