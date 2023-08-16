@@ -34,8 +34,7 @@ const Chat = () => {
   const handleSendMessage = async () => {
     if (inputValue.trim() !== "") {
       try {
-        const url = urlToCall;
-        const result = await makePostRequest(url, jsonData);
+        const result = await makePostRequest(urlToCall, jsonData);
         const message = result.name;
         setMessages([
           ...messages,
@@ -100,16 +99,12 @@ const Chat = () => {
                           <AccountCircleIcon />
                         </ListItemIcon>
                       </ListItem>
-                      {/* <Divider /> */}
                     </React.Fragment>
                   );
                 }
                 return (
                   <React.Fragment key={index}>
-                    <ListItem
-                      alignItems="flex-start"
-                      // sx={{ mt: 5, border: 1, borderRadius: 10 }}
-                    >
+                    <ListItem alignItems="flex-start">
                       <ListItemIcon
                         sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}
                       >
