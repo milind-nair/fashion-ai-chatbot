@@ -4,7 +4,7 @@ export const user1 = [
     crawl_timestamp: "2016-01-06 18:20:45 +0000",
     product_url:
       "http://www.flipkart.com/goddess-women-casual-3-4-sleeve-solid-women-s-top/p/itme3ys5xfeb9a7h?pid=tope3ys5cwhktahs",
-    product_name: "goddess women casual 3/4 sleeve solid women's top",
+    product_name: "Goddess Women Casual 3/4 Sleeve Solid Women's Top",
     product_category_tree:
       '["clothing >> women\'s clothing >> western wear >> shirts, tops & tunics >> tops >> goddess women tops"]',
     pid: "tope3ys5cwhktahs",
@@ -28,7 +28,7 @@ export const user1 = [
     crawl_timestamp: "2015-12-01 12:40:44 +0000",
     product_url:
       "http://www.flipkart.com/footash-bellies/p/itmech3wryu6qm9b?pid=shoech3wzhfcvzwu",
-    product_name: "footash bellies",
+    product_name: "Footash Bellies",
     product_category_tree:
       '["footwear >> women\'s footwear >> casual shoes >> loafers"]',
     pid: "shoech3wzhfcvzwu",
@@ -52,7 +52,7 @@ export const user1 = [
     crawl_timestamp: "2016-04-01 10:31:02 +0000",
     product_url:
       "http://www.flipkart.com/vinenzia-printed-winter-men-s-gloves/p/itmeewhhuyhzjjvz?pid=gveeewhh8fhxbkxv",
-    product_name: "vinenzia printed winter men's gloves",
+    product_name: "Vinenzia Printed Winter Men's Gloves",
     product_category_tree: '["vinenzia printed winter men\'s gloves"]',
     pid: "gveeewhh8fhxbkxv",
     retail_price: 349,
@@ -75,7 +75,7 @@ export const user1 = [
     crawl_timestamp: "2016-01-04 00:20:04 +0000",
     product_url:
       "http://www.flipkart.com/fayona-sleeveless-solid-women-s-jacket/p/itmechxwzpzk5nyn?pid=jckechxwdysvdzg2",
-    product_name: "fayona sleeveless solid women's jacket",
+    product_name: "Fayona Sleeveless Solid Women's Jacket",
     product_category_tree:
       '["clothing >> women\'s clothing >> western wear >> shrugs & jackets >> winter jackets >> fayona winter jackets"]',
     pid: "jckechxwdysvdzg2",
@@ -99,7 +99,7 @@ export const user1 = [
     crawl_timestamp: "2016-05-12 14:18:51 +0000",
     product_url:
       "http://www.flipkart.com/timberlake-slim-fit-women-s-red-jeans/p/itmege8rbwg4wfyv?pid=jeaege8rgzssshxz",
-    product_name: "timberlake slim fit fit women's red jeans",
+    product_name: "Timberlake Slim Fit Fit Women's Red Jeans",
     product_category_tree:
       "[\"clothing >> women's clothing >> western wear >> jeans & shorts >> jeans >> timberlake jeans >> timberlake slim fit fit women's red jeans\"]",
     pid: "jeaege8rgzssshxz",
@@ -123,7 +123,7 @@ export const user1 = [
     crawl_timestamp: "2016-03-18 08:01:41 +0000",
     product_url:
       "http://www.flipkart.com/t-three-slim-fit-girl-s-jeans/p/itmegh3jax9xfzwn?pid=jeaegh66kzwgvwy2",
-    product_name: "t three slim fit girl's jeans",
+    product_name: "T Three Slim Fit Girl's Jeans",
     product_category_tree:
       "[\"clothing >> kids' clothing >> girls wear >> jeans >> t three jeans >> t three slim fit girl's jeans\"]",
     pid: "jeaegh66kzwgvwy2",
@@ -141,52 +141,5 @@ export const user1 = [
       '{"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"brand fit", "value"=>"slim"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"rise", "value"=>"mid rise"}, {"key"=>"ideal for", "value"=>"girl\'s"}, {"key"=>"style code", "value"=>"3001stone"}, {"value"=>"1 jeans"}]}',
     Combined:
       '["clothing >> kids\' clothing >> girls wear >> jeans >> t three jeans >> t three slim fit girl\'s jeans"] {"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"brand fit", "value"=>"slim"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"rise", "value"=>"mid rise"}, {"key"=>"ideal for", "value"=>"girl\'s"}, {"key"=>"style code", "value"=>"3001stone"}, {"value"=>"1 jeans"}]}',
-  },
-  {
-    uniq_id: "1a0b3810908c59fa9f038ed962135196",
-    crawl_timestamp: "2016-04-24 18:34:50 +0000",
-    product_url:
-      "http://www.flipkart.com/anasazi-casual-3-4-sleeve-solid-women-s-top/p/itmehzntqy8fnhyz?pid=topehznt48hmru59",
-    product_name: "anasazi casual 3/4 sleeve solid women's top",
-    product_category_tree: '["anasazi casual 3/4 sleeve solid women\'s top"]',
-    pid: "topehznt48hmru59",
-    retail_price: 899,
-    discounted_price: 899,
-    image:
-      '["http://img5a.flixcart.com/image/top/x/z/j/210-anasazi-xxl-original-imaehznkvuvqkyrw.jpeg", "http://img5a.flixcart.com/image/top/x/z/j/210-anasazi-xxl-original-imaehznkrvrkfxwz.jpeg", "http://img5a.flixcart.com/image/top/x/z/j/210-anasazi-xxl-original-imaehznkwgvybtud.jpeg", "http://img5a.flixcart.com/image/top/y/g/g/210-anasazi-xl-original-imaehznkzyctrhmn.jpeg", "http://img6a.flixcart.com/image/top/r/x/z/210-anasazi-l-original-imaehznkp5nvmkcn.jpeg"]',
-    is_FK_Advantage_product: false,
-    description:
-      "specifications of anasazi casual 3/4 sleeve solid women's top top details sleeve 3/4 sleeve number of contents in sales package pack of 1 fabric cotton type top neck round neck general details pattern solid ideal for women's occasion casual fabric care gentle machine wash in the box top",
-    product_rating: "no rating available",
-    overall_rating: "no rating available",
-    brand: "anasazi",
-    product_specifications:
-      '{"product_specification"=>[{"key"=>"sleeve", "value"=>"3/4 sleeve"}, {"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"type", "value"=>"top"}, {"key"=>"neck", "value"=>"round neck"}, {"key"=>"pattern", "value"=>"solid"}, {"key"=>"ideal for", "value"=>"women\'s"}, {"key"=>"occasion", "value"=>"casual"}, {"value"=>"gentle machine wash"}, {"value"=>"top"}]}',
-    Combined:
-      '["anasazi casual 3/4 sleeve solid women\'s top"] {"product_specification"=>[{"key"=>"sleeve", "value"=>"3/4 sleeve"}, {"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"type", "value"=>"top"}, {"key"=>"neck", "value"=>"round neck"}, {"key"=>"pattern", "value"=>"solid"}, {"key"=>"ideal for", "value"=>"women\'s"}, {"key"=>"occasion", "value"=>"casual"}, {"value"=>"gentle machine wash"}, {"value"=>"top"}]}',
-  },
-  {
-    uniq_id: "3a6f54f46421ed93647be446f64ea82d",
-    crawl_timestamp: "2016-05-05 08:30:49 +0000",
-    product_url:
-      "http://www.flipkart.com/o-baby-women-s-printed-white-dark-green-top-shorts-set/p/itme3hz2wyujmyys?pid=nste3hz2fzzqf6zc",
-    product_name: "o baby women's printed white, dark green top & shorts set",
-    product_category_tree:
-      "[\"clothing >> women's clothing >> lingerie, sleep & swimwear >> night suits >> o baby night suits >> o baby women's printed white, dark green top & s...\"]",
-    pid: "nste3hz2fzzqf6zc",
-    retail_price: 960,
-    discounted_price: 960,
-    image:
-      '["http://img6a.flixcart.com/image/night-suit/s/g/b/6406-white-o-baby-xl-original-imae3kvtw6nrhecb.jpeg", "http://img6a.flixcart.com/image/night-suit/s/g/b/6406-white-o-baby-xl-original-imae3kvttkshqkbq.jpeg"]',
-    is_FK_Advantage_product: false,
-    description:
-      "key features of o baby women's printed white, dark green top & shorts set fabric: cotton hosiery brand color: white, dark green,specifications of o baby women's printed white, dark green top & shorts set dimensions length short general details pattern printed ideal for women's night suit details number of contents in sales package pack of 1 fabric cotton hosiery type top & shorts set in the box top, short set fabric care dry clean",
-    product_rating: "no rating available",
-    overall_rating: "no rating available",
-    brand: "o baby",
-    product_specifications:
-      '{"product_specification"=>[{"key"=>"length", "value"=>"short"}, {"key"=>"pattern", "value"=>"printed"}, {"key"=>"ideal for", "value"=>"women\'s"}, {"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"cotton hosiery"}, {"key"=>"type", "value"=>"top and shorts set"}, {"value"=>"top, short set"}, {"value"=>"dry clean"}]}',
-    Combined:
-      '["clothing >> women\'s clothing >> lingerie, sleep & swimwear >> night suits >> o baby night suits >> o baby women\'s printed white, dark green top & s..."] {"product_specification"=>[{"key"=>"length", "value"=>"short"}, {"key"=>"pattern", "value"=>"printed"}, {"key"=>"ideal for", "value"=>"women\'s"}, {"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"cotton hosiery"}, {"key"=>"type", "value"=>"top and shorts set"}, {"value"=>"top, short set"}, {"value"=>"dry clean"}]}',
   },
 ];

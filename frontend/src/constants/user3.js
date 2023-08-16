@@ -4,7 +4,7 @@ export const user3 = [
     crawl_timestamp: "2015-12-01 10:15:43 +0000",
     product_url:
       "http://www.flipkart.com/elite-collection-medium-acrylic-sticker/p/itme88knfk6p45ea?pid=stie88kn9zdsgzky",
-    product_name: "elite collection medium acrylic sticker",
+    product_name: "Elite Collection Medium Acrylic Sticker",
     product_category_tree:
       '["baby care >> baby & kids gifts >> stickers >> elite collection stickers"]',
     pid: "stie88kn9zdsgzky",
@@ -28,7 +28,7 @@ export const user3 = [
     crawl_timestamp: "2015-12-01 06:13:00 +0000",
     product_url:
       "http://www.flipkart.com/www-thepaper-asia-floral-flower-art-canvas-pencil-box/p/itmeajvrhp2wbmmp?pid=pbxeajvrv5hnmdtr",
-    product_name: "www.thepaper.asia floral flower art canvas pencil box",
+    product_name: "www.thepaper.asia Floral Flower Art Canvas Pencil Box",
     product_category_tree:
       '["toys & school supplies >> school supplies >> geometry & pencil boxes >> www.thepaper.asia geometry & pencil boxes"]',
     pid: "pbxeajvrv5hnmdtr",
@@ -52,7 +52,7 @@ export const user3 = [
     crawl_timestamp: "2016-04-02 19:26:28 +0000",
     product_url:
       "http://www.flipkart.com/day-men-s-top/p/itmeeq82tubpa2gn?pid=tmleerdzwgg2qyc5",
-    product_name: "day by day men's top",
+    product_name: "Day By Day Men's Top",
     product_category_tree:
       "[\"clothing >> men's clothing >> winter & seasonal wear >> thermals >> day by day thermals >> day by day men's top\"]",
     pid: "tmleerdzwgg2qyc5",
@@ -72,35 +72,11 @@ export const user3 = [
       '["clothing >> men\'s clothing >> winter & seasonal wear >> thermals >> day by day thermals >> day by day men\'s top"] {"product_specification"=>[{"key"=>"sleeve", "value"=>"sleeveless"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"type", "value"=>"top"}, {"key"=>"neck", "value"=>"round neck"}, {"key"=>"pattern", "value"=>"striped"}, {"key"=>"ideal for", "value"=>"men\'s"}, {"value"=>"wash with similar colors, use detergent for colors"}, {"key"=>"style code", "value"=>"dbd0009bn"}, {"value"=>"1 thermal"}]}',
   },
   {
-    uniq_id: "44991fe68c2dd24eb5659203c3f9cd37",
-    crawl_timestamp: "2016-04-13 13:26:16 +0000",
-    product_url:
-      "http://www.flipkart.com/day-men-s-top/p/itmeerdz4rn8un59?pid=tmleerdzwr7exb63",
-    product_name: "day by day men's top",
-    product_category_tree:
-      "[\"clothing >> men's clothing >> winter & seasonal wear >> thermals >> day by day thermals >> day by day men's top\"]",
-    pid: "tmleerdzwr7exb63",
-    retail_price: 392,
-    discounted_price: 371,
-    image:
-      '["http://img5a.flixcart.com/image/thermal/7/e/m/dbd0009rvgvn-day-by-day-95-1000x1000-imaeefhjqfkhugmn.jpeg", "http://img6a.flixcart.com/image/thermal/7/e/m/dbd0009rvgvn-day-by-day-95-original-imaeefhjqfkhugmn.jpeg", "http://img5a.flixcart.com/image/thermal/7/e/m/dbd0009rvgvn-day-by-day-95-original-imaeefhjbsgngjs4.jpeg", "http://img6a.flixcart.com/image/thermal/7/e/m/dbd0009rvgvn-day-by-day-110-original-imaeefhj3y9bdary.jpeg", "http://img5a.flixcart.com/image/thermal/7/e/m/dbd0009rvgvn-day-by-day-110-original-imaeefhjw9fyahht.jpeg"]',
-    is_FK_Advantage_product: false,
-    description:
-      "specifications of day by day men's top general details ideal for men's pattern striped thermal details type top fabric cotton neck v-neck sleeve full sleeves fabric care wash with similar colors, use detergent for colors additional details style code dbd0009rvgvn in the box 1 thermal",
-    product_rating: "no rating available",
-    overall_rating: "no rating available",
-    brand: "day by day",
-    product_specifications:
-      '{"product_specification"=>[{"key"=>"ideal for", "value"=>"men\'s"}, {"key"=>"pattern", "value"=>"striped"}, {"key"=>"type", "value"=>"top"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"neck", "value"=>"v-neck"}, {"key"=>"sleeve", "value"=>"full sleeves"}, {"value"=>"wash with similar colors, use detergent for colors"}, {"key"=>"style code", "value"=>"dbd0009rvgvn"}, {"value"=>"1 thermal"}]}',
-    Combined:
-      '["clothing >> men\'s clothing >> winter & seasonal wear >> thermals >> day by day thermals >> day by day men\'s top"] {"product_specification"=>[{"key"=>"ideal for", "value"=>"men\'s"}, {"key"=>"pattern", "value"=>"striped"}, {"key"=>"type", "value"=>"top"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"neck", "value"=>"v-neck"}, {"key"=>"sleeve", "value"=>"full sleeves"}, {"value"=>"wash with similar colors, use detergent for colors"}, {"key"=>"style code", "value"=>"dbd0009rvgvn"}, {"value"=>"1 thermal"}]}',
-  },
-  {
     uniq_id: "ccc2674e1d40db11ccbe7c95c2b1cf88",
     crawl_timestamp: "2015-12-01 10:15:43 +0000",
     product_url:
       "http://www.flipkart.com/honey-pantaloons-women-s-empire-waist-dress/p/itmeahqzvbfqrzhy?pid=dreeahqzqekxfhnx",
-    product_name: "honey by pantaloons women's empire waist dress",
+    product_name: "Honey By Pantaloons Women's Empire Waist Dress",
     product_category_tree:
       '["clothing >> women\'s clothing >> western wear >> dresses & skirts >> dresses >> honey by pantaloons dresses"]',
     pid: "dreeahqzqekxfhnx",
@@ -124,7 +100,7 @@ export const user3 = [
     crawl_timestamp: "2016-06-12 08:43:39 +0000",
     product_url:
       "http://www.flipkart.com/koolkids-girl-s-a-line-red-dress/p/itmejh2uprcyczsa?pid=dreejh2udqaqybzz",
-    product_name: "koolkids girl's a-line red dress",
+    product_name: "Koolkids Girl's A-line Red Dress",
     product_category_tree:
       "[\"clothing >> kids' clothing >> girls wear >> dresses & skirts >> dresses >> koolkids dresses >> koolkids girl's a-line red dress\"]",
     pid: "dreejh2udqaqybzz",
@@ -148,7 +124,7 @@ export const user3 = [
     crawl_timestamp: "2015-12-29 05:07:38 +0000",
     product_url:
       "http://www.flipkart.com/lord-s-mens-beige-loafers/p/itmdykr8mjyeyctv?pid=shodykr8qfmvyht9",
-    product_name: "lord's mens beige loafers",
+    product_name: "Lord's Mens Beige Loafers",
     product_category_tree:
       "[\"footwear >> men's footwear >> casual shoes >> lord's casual shoes\"]",
     pid: "shodykr8qfmvyht9",
@@ -166,29 +142,5 @@ export const user3 = [
       '{"product_specification"=>[{"key"=>"ideal for", "value"=>"men"}, {"key"=>"occasion", "value"=>"casual"}, {"key"=>"outer material", "value"=>"leather"}, {"key"=>"color", "value"=>"beige"}, {"value"=>"shoes"}]}',
     Combined:
       '["footwear >> men\'s footwear >> casual shoes >> lord\'s casual shoes"] {"product_specification"=>[{"key"=>"ideal for", "value"=>"men"}, {"key"=>"occasion", "value"=>"casual"}, {"key"=>"outer material", "value"=>"leather"}, {"key"=>"color", "value"=>"beige"}, {"value"=>"shoes"}]}',
-  },
-  {
-    uniq_id: "db526f68185007d6680e74d78d26e734",
-    crawl_timestamp: "2015-12-29 05:07:38 +0000",
-    product_url:
-      "http://www.flipkart.com/ishoes-kello-loafers/p/itmeyayfjyknycsu?pid=shoeyayfzyjek2tn",
-    product_name: "ishoes kello loafers",
-    product_category_tree:
-      '["footwear >> men\'s footwear >> casual shoes >> ishoes casual shoes"]',
-    pid: "shoeyayfzyjek2tn",
-    retail_price: 2499,
-    discounted_price: 999,
-    image:
-      '["http://img5a.flixcart.com/image/shoe/g/p/v/black-kello-d7-ishoes-6-original-imaeye2tmsukugma.jpeg", "http://img6a.flixcart.com/image/shoe/g/p/v/black-kello-d7-ishoes-6-original-imaeye2tmsukugma.jpeg", "http://img5a.flixcart.com/image/shoe/g/p/v/black-kello-d7-ishoes-6-original-imaeye2tggyhyjub.jpeg", "http://img5a.flixcart.com/image/shoe/g/p/v/black-kello-d7-ishoes-6-original-imaeye2tkzapguyv.jpeg", "http://img5a.flixcart.com/image/shoe/g/p/v/black-kello-d7-ishoes-6-original-imaeye2t7hsaah5f.jpeg", "http://img6a.flixcart.com/image/shoe/g/p/v/black-kello-d7-ishoes-6-original-imaeye2tz9ghhhzd.jpeg"]',
-    is_FK_Advantage_product: false,
-    description:
-      "ishoes kello loafers - buy ishoes kello loafers - kello-d7 only for rs. 999 from flipkart.com. only genuine products. 30 day replacement guarantee. free shipping. cash on delivery!",
-    product_rating: "1",
-    overall_rating: "1",
-    brand: "",
-    product_specifications:
-      '{"product_specification"=>[{"key"=>"ideal for", "value"=>"men"}, {"key"=>"occasion", "value"=>"casual"}, {"key"=>"outer material", "value"=>"synthetic leather"}, {"key"=>"color", "value"=>"black"}, {"value"=>"1 pair of shoes"}]}',
-    Combined:
-      '["footwear >> men\'s footwear >> casual shoes >> ishoes casual shoes"] {"product_specification"=>[{"key"=>"ideal for", "value"=>"men"}, {"key"=>"occasion", "value"=>"casual"}, {"key"=>"outer material", "value"=>"synthetic leather"}, {"key"=>"color", "value"=>"black"}, {"value"=>"1 pair of shoes"}]}',
   },
 ];

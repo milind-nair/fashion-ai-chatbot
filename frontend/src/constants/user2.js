@@ -4,7 +4,7 @@ export const user2 = [
     crawl_timestamp: "2015-12-01 06:13:00 +0000",
     product_url:
       "http://www.flipkart.com/french-factor-man-year-deodorant-gift-set-combo/p/itme4gf7gzhmzhjz?pid=cage4gf7uwgzhn7j",
-    product_name: "french factor man of the year deodorant gift set  combo set",
+    product_name: "French Factor Man Of The Year Deodorant Gift Set  Combo Set",
     product_category_tree:
       '["beauty and personal care >> fragrances >> deodorants >> combos >> french factor combos"]',
     pid: "cage4gf7uwgzhn7j",
@@ -28,7 +28,7 @@ export const user2 = [
     crawl_timestamp: "2015-12-01 06:13:00 +0000",
     product_url:
       "http://www.flipkart.com/nike-up-down-combo-set/p/itme8tq8zwe9psnj?pid=cage8tq8kfeghy9m",
-    product_name: "nike up or down combo set",
+    product_name: "Nike Up Or Down Combo Set",
     product_category_tree:
       '["beauty and personal care >> fragrances >> deodorants >> combos >> nike combos"]',
     pid: "cage8tq8kfeghy9m",
@@ -52,7 +52,7 @@ export const user2 = [
     crawl_timestamp: "2016-03-07 19:42:22 +0000",
     product_url:
       "http://www.flipkart.com/happy-walls-extra-large-pvc-vinyl-sticker/p/itmeghkbc7gaaquf?pid=stieghkbgy635gpp",
-    product_name: "happy walls extra large pvc vinyl sticker",
+    product_name: "Happy Walls Extra Large Pvc Vinyl Sticker",
     product_category_tree:
       '["home decor & festive needs >> wall decor & clocks >> wall decals & stickers >> happy walls wall decals & stickers >> happy walls extra large pvc vinyl sticker (pack ..."]',
     pid: "stieghkbgy635gpp",
@@ -72,35 +72,11 @@ export const user2 = [
       '["home decor & festive needs >> wall decor & clocks >> wall decals & stickers >> happy walls wall decals & stickers >> happy walls extra large pvc vinyl sticker (pack ..."] {"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"brand", "value"=>"happy walls"}, {"key"=>"laminated", "value"=>"yes"}, {"key"=>"type", "value"=>"pvc vinyl"}, {"key"=>"size in number", "value"=>"12"}, {"key"=>"number of stickers", "value"=>"1"}, {"key"=>"material", "value"=>"imported pvc vinyl"}, {"key"=>"size", "value"=>"extra large"}, {"key"=>"weight", "value"=>"200 g"}, {"key"=>"height", "value"=>"110 cm"}, {"key"=>"width", "value"=>"80 cm"}]}',
   },
   {
-    uniq_id: "659df0d8e488691d877b8477f11b5edd",
-    crawl_timestamp: "2016-03-07 19:42:22 +0000",
-    product_url:
-      "http://www.flipkart.com/happy-walls-extra-large-pvc-vinyl-sticker/p/itmeghzfakve4zud?pid=stieghzfwr7re3eg",
-    product_name: "happy walls extra large pvc vinyl sticker",
-    product_category_tree:
-      '["home decor & festive needs >> wall decor & clocks >> wall decals & stickers >> happy walls wall decals & stickers >> happy walls extra large pvc vinyl sticker (pack ..."]',
-    pid: "stieghzfwr7re3eg",
-    retail_price: 1299,
-    discounted_price: 299,
-    image:
-      '["http://img5a.flixcart.com/image/sticker/3/e/g/6943-happy-walls-12-running-horse-with-art-extra-large-1100x1100-imaeghkhnrqzv56g.jpeg", "http://img6a.flixcart.com/image/sticker/3/e/g/6943-happy-walls-12-running-horse-with-art-extra-large-original-imaeghkhnrqzv56g.jpeg", "http://img5a.flixcart.com/image/sticker/3/e/g/6943-happy-walls-12-running-horse-with-art-extra-large-original-imaeghkhrcwgsc4f.jpeg"]',
-    is_FK_Advantage_product: false,
-    description:
-      "key features of happy walls extra large pvc vinyl sticker height : 100 cm width : 100 cm imported pvc vinyl,happy walls extra large pvc vinyl sticker (pack of 1) price: rs. 299 pvc vinyl compatible ideal for family lounge, bedroom, cafe and restaurantstickers decorate your home just in minutes. wall sticker application instruction our wall decal application instructions will make it easy for you to apply your wall decals. 1). the surface you wish to attach your decal must be clean and free from dust, grease or any other contamination. 2). simply peel those pre-cut pieces of wall stickers off from backing paper and apply them on the desired area. freshly painted or lacquered surfaces must be allowed to completely cure before the decal is applied. we recommend waiting for minimum of 2-3 weeks. 3). press firmly to squeeze out any air bubbles. please note: it will be helpful and fun if you take help of your friends or family members to stick the wall decals on your wall. 3). do not apply on wet wall, kids room, nursery room etc. features pvc, non-toxic, eco-friendly...,specifications of happy walls extra large pvc vinyl sticker (pack of 1) in the box number of contents in sales package pack of 1 general brand happy walls type pvc vinyl number of stickers 1 size extra large size in number 12 material imported pvc vinyl laminated yes additional features these are very easily apply & removable wall stickers... dimensions width 100 cm height 100 cm weight 200 g",
-    product_rating: "no rating available",
-    overall_rating: "no rating available",
-    brand: "happy walls",
-    product_specifications:
-      '{"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"brand", "value"=>"happy walls"}, {"key"=>"type", "value"=>"pvc vinyl"}, {"key"=>"number of stickers", "value"=>"1"}, {"key"=>"size", "value"=>"extra large"}, {"key"=>"size in number", "value"=>"12"}, {"key"=>"material", "value"=>"imported pvc vinyl"}, {"key"=>"laminated", "value"=>"yes"}, {"value"=>"these are very easily apply and removable wall stickers..."}, {"key"=>"width", "value"=>"100 cm"}, {"key"=>"height", "value"=>"100 cm"}, {"key"=>"weight", "value"=>"200 g"}]}',
-    Combined:
-      '["home decor & festive needs >> wall decor & clocks >> wall decals & stickers >> happy walls wall decals & stickers >> happy walls extra large pvc vinyl sticker (pack ..."] {"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"brand", "value"=>"happy walls"}, {"key"=>"type", "value"=>"pvc vinyl"}, {"key"=>"number of stickers", "value"=>"1"}, {"key"=>"size", "value"=>"extra large"}, {"key"=>"size in number", "value"=>"12"}, {"key"=>"material", "value"=>"imported pvc vinyl"}, {"key"=>"laminated", "value"=>"yes"}, {"value"=>"these are very easily apply and removable wall stickers..."}, {"key"=>"width", "value"=>"100 cm"}, {"key"=>"height", "value"=>"100 cm"}, {"key"=>"weight", "value"=>"200 g"}]}',
-  },
-  {
     uniq_id: "3ec0b78011a544c90d10f1bc0f95bea4",
     crawl_timestamp: "2016-05-10 11:57:25 +0000",
     product_url:
       "http://www.flipkart.com/killys-men-s-solid-no-show-socks/p/itmeghh8vncyv9gd?pid=soceghh8zdczyskx",
-    product_name: "killys men's solid no show socks",
+    product_name: "Killys Men's Solid No Show Socks",
     product_category_tree:
       "[\"clothing >> men's clothing >> accessories & combo sets >> socks >> killys socks >> killys men's solid no show socks\"]",
     pid: "soceghh8zdczyskx",
@@ -125,7 +101,7 @@ export const user2 = [
     product_url:
       "http://www.flipkart.com/bonjour-ladies-socks-women-s-self-design-striped-ankle-length/p/itmeatztt6gtnr3w?pid=soceatztcggygmte",
     product_name:
-      "bonjour ladies socks women's self design, striped ankle length socks",
+      "Bonjour Ladies Socks Women's Self Design, Striped Ankle Length Socks",
     product_category_tree:
       '["clothing >> women\'s clothing >> accessories >> socks & stockings >> socks >> bonjour socks"]',
     pid: "soceatztcggygmte",
@@ -149,7 +125,7 @@ export const user2 = [
     crawl_timestamp: "2015-12-31 09:19:31 +0000",
     product_url:
       "http://www.flipkart.com/puma-solid-cap/p/itmebj37bhkerc5m?pid=capebj37gkbb5dk2",
-    product_name: "puma solid cap cap",
+    product_name: "Puma Solid Cap Cap",
     product_category_tree:
       '["clothing >> men\'s clothing >> accessories & combo sets >> caps >> puma caps"]',
     pid: "capebj37gkbb5dk2",
@@ -167,29 +143,5 @@ export const user2 = [
       '{"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"100% acrylic"}, {"key"=>"type", "value"=>"cap"}, {"key"=>"pattern", "value"=>"solid"}, {"key"=>"ideal for", "value"=>"men\'s"}, {"value"=>"1 cap"}, {"key"=>"style code", "value"=>"569365011"}]}',
     Combined:
       '["clothing >> men\'s clothing >> accessories & combo sets >> caps >> puma caps"] {"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"100% acrylic"}, {"key"=>"type", "value"=>"cap"}, {"key"=>"pattern", "value"=>"solid"}, {"key"=>"ideal for", "value"=>"men\'s"}, {"value"=>"1 cap"}, {"key"=>"style code", "value"=>"569365011"}]}',
-  },
-  {
-    uniq_id: "320833ab08c9a94ef83520612899a85f",
-    crawl_timestamp: "2016-05-22 16:29:40 +0000",
-    product_url:
-      "http://www.flipkart.com/florence9-baby-cap-red-checks/p/itmegw7ujbpbftvc?pid=capegw7utghrjbew",
-    product_name: "florence9 baby cap red checks cap",
-    product_category_tree:
-      '["baby care >> infant wear >> baby boys\' clothes >> accessories >> caps >> florence9 caps >> florence9 baby cap red checks cap"]',
-    pid: "capegw7utghrjbew",
-    retail_price: 800,
-    discounted_price: 399,
-    image:
-      '["http://img5a.flixcart.com/image/cap/b/e/w/baby-cap-red-checks-florence9-12-18-months-original-imaegkd75ytdjuzf.jpeg", "http://img6a.flixcart.com/image/cap/b/e/w/baby-cap-red-checks-florence9-12-18-months-original-imaegkd75ytdjuzf.jpeg"]',
-    is_FK_Advantage_product: false,
-    description:
-      "key features of florence9 baby cap red checks cap red checks cotton,specifications of florence9 baby cap red checks cap cap details number of contents in sales package pack of 1 fabric cotton type baby cap red checks general details occasion casual ideal for baby boy's, baby girl's additional details style code baby cap red checks",
-    product_rating: "no rating available",
-    overall_rating: "no rating available",
-    brand: "florence9",
-    product_specifications:
-      '{"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"type", "value"=>"baby cap red checks"}, {"key"=>"occasion", "value"=>"casual"}, {"key"=>"ideal for", "value"=>"baby boy\'s, baby girl\'s"}, {"key"=>"style code", "value"=>"baby cap red checks"}]}',
-    Combined:
-      '["baby care >> infant wear >> baby boys\' clothes >> accessories >> caps >> florence9 caps >> florence9 baby cap red checks cap"] {"product_specification"=>[{"key"=>"number of contents in sales package", "value"=>"pack of 1"}, {"key"=>"fabric", "value"=>"cotton"}, {"key"=>"type", "value"=>"baby cap red checks"}, {"key"=>"occasion", "value"=>"casual"}, {"key"=>"ideal for", "value"=>"baby boy\'s, baby girl\'s"}, {"key"=>"style code", "value"=>"baby cap red checks"}]}',
   },
 ];
