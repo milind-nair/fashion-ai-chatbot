@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { UserContext } from "../context/UserContext";
-import { urlToCall, jsonData } from "../constants/constants";
+import { urlToCall} from "../constants/constants";
 import { conversations } from "../constants/constants";
 
 const Chat = () => {
