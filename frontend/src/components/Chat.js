@@ -40,7 +40,8 @@ const Chat = () => {
             .history,
         };
         console.log(jsonToSend);
-        const result = await makePostRequest(urlToCall, jsonData);
+        // const result = await makePostRequest(urlToCall, jsonData);
+        const result = await makePostRequest(urlToCall, jsonToSend);
         const message = result.name;
         setMessages([
           ...messages,
