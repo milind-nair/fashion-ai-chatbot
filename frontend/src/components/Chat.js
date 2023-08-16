@@ -2,6 +2,7 @@
 import React, { useState, useContext } from "react";
 import SmartToyIcon from "@mui/icons-material/SmartToy";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import axios from "axios";
 import {
   TextField,
   Paper,
@@ -15,6 +16,7 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { UserContext } from "../context/UserContext";
+import { urlToCall, jsonData } from "../constants";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -29,22 +31,33 @@ const Chat = () => {
       handleSendMessage();
     }
   };
-  // const [flag, setFlag] = useState(true);
-  const handleSendMessage = () => {
+  const handleSendMessage = async () => {
     if (inputValue.trim() !== "") {
-      // let type = flag === true ? "question" : "answer";
-      // setFlag(!flag);
-      setMessages([
-        ...messages,
-        { user: currentUser, message: inputValue, type: "question" },
-        {
-          user: currentUser,
-          message: "The AI does not work yet",
-          type: "answer",
-        },
-      ]);
-
+      try {
+        const url = urlToCall;
+        const result = await makePostRequest(url, jsonData);
+        const message = result.name;
+        setMessages([
+          ...messages,
+          { user: currentUser, message: inputValue, type: "question" },
+          {
+            user: currentUser,
+            message: message,
+            type: "answer",
+          },
+        ]);
+      } catch (error) {
+        console.error("Error:", error.message);
+      }
       setInputValue("");
+    }
+  };
+  const makePostRequest = async (url, data) => {
+    try {
+      const response = await axios.post(url, data);
+      return response.data;
+    } catch (error) {
+      throw error;
     }
   };
   return (
