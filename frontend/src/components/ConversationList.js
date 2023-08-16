@@ -11,40 +11,13 @@ import {
   Avatar,
   ListItemText,
   IconButton,
-  //   Divider,
 } from "@mui/material";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import { UserContext } from "../context/UserContext";
 import UserHistoryDialog from "./UserHistoryDialog";
+import { conversations } from "../constants";
 
 const ConversationList = () => {
-  const conversations = [
-    {
-      name: "User 1",
-      history: [
-        "Sample history 1 for User 1",
-        "Sample history 2 for User 1",
-        "Sample history 2 for User 1",
-      ],
-    },
-    {
-      name: "User 2",
-      history: [
-        "Sample history 1 for User 2",
-        "Sample history 2 for User 2",
-        "Sample history 3 for User 2",
-      ],
-    },
-    {
-      name: "User 3",
-      history: [
-        "Sample history 1 for User 3",
-        "Sample history 2 for User 3",
-        "Sample history 3 for User 3",
-      ],
-    },
-  ];
-
   const { currentUser, setCurrentUser } = useContext(UserContext);
 
   const userChangeHandler = (conversation) => {
@@ -56,7 +29,6 @@ const ConversationList = () => {
   const showHistory = () => {
     setDialogOpen(true);
   };
-
   return (
     <Paper
       elevation={3}
