@@ -17,6 +17,7 @@ import {
 import SendIcon from "@mui/icons-material/Send";
 import { UserContext } from "../context/UserContext";
 import { urlToCall, jsonData } from "../constants";
+import { conversations } from "../constants";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -34,6 +35,12 @@ const Chat = () => {
   const handleSendMessage = async () => {
     if (inputValue.trim() !== "") {
       try {
+        const jsonToSend = {
+          query: inputValue,
+          history: conversations.filter((elem) => elem.name === currentUser)[0]
+            .history,
+        };
+        console.log(jsonToSend);
         const result = await makePostRequest(urlToCall, jsonData);
         const message = result.name;
         setMessages([
