@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { UserContext } from "../context/UserContext";
-import { urlToCall} from "../constants/constants";
+import { urlToCall } from "../constants/constants";
 import { conversations } from "../constants/constants";
 
 const Chat = () => {
@@ -31,6 +31,15 @@ const Chat = () => {
       handleSendMessage();
     }
   };
+  const concatenateWithLineNumbers = (arr) => {
+    let result = "";
+
+    for (let i = 0; i < arr.length; i++) {
+      result += `${i + 1}. ${arr[i]}\n`;
+    }
+
+    return result;
+  };
   const handleSendMessage = async () => {
     if (inputValue.trim() !== "") {
       try {
@@ -42,7 +51,7 @@ const Chat = () => {
         console.log(jsonToSend);
         // const result = await makePostRequest(urlToCall, jsonData);
         const result = await makePostRequest(urlToCall, jsonToSend);
-        const message = result.name;
+        const message = concatenateWithLineNumbers(result.answer);
         setMessages([
           ...messages,
           { user: currentUser, message: inputValue, type: "question" },
