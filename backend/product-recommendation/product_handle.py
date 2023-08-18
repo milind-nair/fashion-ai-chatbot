@@ -5,17 +5,13 @@ from sklearn.metrics.pairwise import cosine_similarity
 import nltk
 from nltk import word_tokenize, pos_tag
 
-# main function define
-
-
 def main():
 
-    productDf = pd.read_csv('C:/Users/GarimaJi/.vscode/nlp/fashion-ai-chatbot/backend/dataset/flipkartProductDataset.csv')
+    productDf = pd.read_csv('../dataset/flipkartProductDataset.csv')
     sql = 'Blue Kurta with black jeans should go well'
     preprocessedSql = sql.lower()
     preprocessedProducts = productDf.applymap(
         lambda x: x.lower() if isinstance(x, str) else x)
-    # type(productDf)
 
     # Tokenize the sentence into words
     words = word_tokenize(preprocessedSql)
@@ -31,7 +27,6 @@ def main():
         if pos_tags[i][1].startswith('JJ'):
             j = i
             while (pos_tags[j][1].startswith('NN') == False):
-                # print(pos_tags[j][0],pos_tags[j][1])
                 j += 1
 
             r = []
@@ -49,7 +44,6 @@ def main():
 
     print("Adjective-Noun Pairs:", adjective_noun_pairs[0])
 
-    # Create TF-IDF vectorizer
     # Create TF-IDF vectorizer
     preprocessedProducts['Combined'] = preprocessedProducts['product_category_tree'].str.cat(
         preprocessedProducts['product_specifications'], sep=' ')
