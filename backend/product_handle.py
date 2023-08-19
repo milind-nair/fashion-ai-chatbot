@@ -8,10 +8,9 @@ from nltk import word_tokenize, pos_tag
 # main function define
 
 
-def main():
+def main(sql):
 
     productDf = pd.read_csv('C:/Users/GarimaJi/.vscode/nlp/fashion-ai-chatbot/backend/dataset/flipkartProductDataset.csv')
-    sql = 'Blue Kurta with black jeans should go well'
     preprocessedSql = sql.lower()
     preprocessedProducts = productDf.applymap(
         lambda x: x.lower() if isinstance(x, str) else x)
@@ -53,23 +52,24 @@ def main():
     # Create TF-IDF vectorizer
     preprocessedProducts['Combined'] = preprocessedProducts['product_category_tree'].str.cat(
         preprocessedProducts['product_specifications'], sep=' ')
-
-    for i in range(len(adjective_noun_pairs)):
+    for pair in adjective_noun_pairs:
         vectorizer = TfidfVectorizer()
-        productVectors = vectorizer.fit_transform(
-            preprocessedProducts['Combined'].fillna(''))
-        query_vector = vectorizer.transform(
-            [" ".join(adjective_noun_pairs[i])])
-        similarity_scores = cosine_similarity(
-            query_vector, productVectors).flatten()
+        productVectors = vectorizer.fit_transform(preprocessedProducts['Combined'].fillna(''))
+        query_vector = vectorizer.transform([" ".join(pair)])
+        similarity_scores = cosine_similarity(query_vector, productVectors).flatten()
 
         ranked_indices = similarity_scores.argsort()[::-1]
-        ranked_products = [preprocessedProducts['product_name'][i]
-                           for i in ranked_indices]
-        # Print ranked products
-        for i, (rank, product) in enumerate(zip(range(1, 11), ranked_products[:10]), start=1):
-            print(f"Rank {rank}: {product}")
+        ranked_products = preprocessedProducts.iloc[ranked_indices]
 
-
+        recommended_urls = ranked_products['product_url'].tolist()
+        recommended_prices = ranked_products['retail_price'].tolist()
+        recommendations=[]
+        recommendations.extend(list(zip(recommended_urls[:10], recommended_prices[:10])))
+        
+    return recommendations
+        
 if __name__ == "__main__":
-    main()
+    query = 'Blue Kurta with black jeans should go well'
+    recommended_products = main(query)
+    for i, (product_url, product_price) in enumerate(recommended_products, start=1):
+        print(f"Rank {i}: URL: {product_url}, Price: {product_price}")
