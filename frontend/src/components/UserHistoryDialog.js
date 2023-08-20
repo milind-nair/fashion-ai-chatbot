@@ -69,7 +69,7 @@ export default function UserHistoryDialog({
                 <ListItem>
                   <ListItemText
                     primary={index + 1 + ") "}
-                    sx={{ m: 2 }}
+                    sx={{ m: 2, textAlign: "left" }}
                   ></ListItemText>
                   <ListItemText primary={item.product_name} />
                 </ListItem>
