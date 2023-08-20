@@ -101,7 +101,7 @@ export const user2 = [
     product_url:
       "http://www.flipkart.com/bonjour-ladies-socks-women-s-self-design-striped-ankle-length/p/itmeatztt6gtnr3w?pid=soceatztcggygmte",
     product_name:
-      "Bonjour Ladies Socks Women's Self Design, Striped Ankle Length Socks",
+      "Bonjour Ladies Socks Women's Striped Ankle Length Socks",
     product_category_tree:
       '["clothing >> women\'s clothing >> accessories >> socks & stockings >> socks >> bonjour socks"]',
     pid: "soceatztcggygmte",

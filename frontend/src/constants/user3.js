@@ -28,7 +28,7 @@ export const user3 = [
     crawl_timestamp: "2015-12-01 06:13:00 +0000",
     product_url:
       "http://www.flipkart.com/www-thepaper-asia-floral-flower-art-canvas-pencil-box/p/itmeajvrhp2wbmmp?pid=pbxeajvrv5hnmdtr",
-    product_name: "www.thepaper.asia Floral Flower Art Canvas Pencil Box",
+    product_name: "Floral Flower Art Canvas Pencil Box",
     product_category_tree:
       '["toys & school supplies >> school supplies >> geometry & pencil boxes >> www.thepaper.asia geometry & pencil boxes"]',
     pid: "pbxeajvrv5hnmdtr",
