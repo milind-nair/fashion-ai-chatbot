@@ -9,7 +9,7 @@ from flask import Flask, jsonify
 # Main function definition
 def main(sql):
     # Read the product dataset
-    productDf = pd.read_csv('C:/Users/GarimaJi/.vscode/nlp/fashion-ai-chatbot/backend/dataset/flipkartProductDataset.csv')
+    productDf = pd.read_excel('backend/flipkartProduct.xlsx')
     preprocessedSql = sql.lower()
     preprocessedProducts = productDf.applymap(
         lambda x: x.lower() if isinstance(x, str) else x)
@@ -43,50 +43,49 @@ def main(sql):
             i += 1
 
     # Create TF-IDF vectorizer
-    preprocessedProducts['Combined'] = preprocessedProducts['product_category_tree'].str.cat(
-        preprocessedProducts['product_specifications'], sep=' ')
+    #preprocessedProducts['Combined'] = preprocessedProducts['product_category_tree'].str.cat(
+       # preprocessedProducts['product_specifications'], sep=' ')
 
-    # Prepare the list of recommended products
+
+
+# Create TF-IDF vectorizer
+
     recommended_products = []
     for pair in adjective_noun_pairs:
         vectorizer = TfidfVectorizer()
-        productVectors = vectorizer.fit_transform(preprocessedProducts['Combined'].fillna(''))
+        productVectors = vectorizer.fit_transform(preprocessedProducts['Features'].fillna(''))
         query_vector = vectorizer.transform([" ".join(pair)])
         similarity_scores = cosine_similarity(query_vector, productVectors).flatten()
 
         ranked_indices = similarity_scores.argsort()[::-1]
         ranked_products = preprocessedProducts.iloc[ranked_indices]
 
-        recommended_urls = ranked_products['product_url'].tolist()
-        recommended_prices = ranked_products['retail_price'].tolist()
-        recommended_names = ranked_products['product_name'].tolist()
-        recommended_img_url = ranked_products['image'].tolist()
-        #print(recommended_img_url)
+        recommended_urls = ranked_products['pdt_url'].tolist()
+        recommended_prices = ranked_products['price'].tolist()
+        recommended_names = ranked_products['pdt_name'].tolist()
+        
+                #recommended_img_url = ranked_products['image'].tolist()
+            #print(recommended_img_url)
         recommendations = []
         recommendations.extend(list(zip(recommended_urls[:10], recommended_prices[:10], recommended_names[:10])))
-
         recommended_products.extend(recommendations)
 
-    recommended_products_list = []
-    for url, price, name in recommended_products:
-        recommended_product_dict = {
-            'name': name,
-            'url': url,
-            'price': price
-        }
-        
+        recommended_products_list = []
+        for url, price, name in recommended_products:
+            recommended_product_dict = {
+                'name': name,
+                'url': url,
+                'price': price
+            }
+            
         recommended_products_list.append(recommended_product_dict)
-     
-         
-     
-
+    
     #print((recommended_img_url[0].split(',')[0].replace("[","")).replace('"',""))
     #final_dict=[]
-    return jsonify(recommended_products_list)
+    return (jsonify(recommended_products_list))
 
 if __name__ == "__main__":
     query = 'Blue Kurta with black jeans should go well'
     recommended_products_json = main(query)
-    #print(recommended_products_dict)
+    print(recommended_products_json)
     # Convert list of tuples to list of dictionaries
-
