@@ -42,7 +42,7 @@ const ConversationList = () => {
     >
       <div style={{ marginBottom: "1rem", textAlign: "center" }}>
         <img
-          src="/logo-nobg.png"
+          src="logo-nobg.png"
           alt="FlipChat Logo"
           style={{ maxWidth: "100%", maxHeight: "200px" }}
         />

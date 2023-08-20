@@ -2,7 +2,7 @@ import { user1 } from "./user1";
 import { user2 } from "./user2";
 import { user3 } from "./user3";
 
-export const urlToCall = "";
+export const urlToCall = "http://127.0.0.1:3001/prompt";
 // export const urlToCall = "https://api.restful-api.dev/objects";
 export const conversations = [
   {

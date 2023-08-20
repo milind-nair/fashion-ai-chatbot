@@ -43,13 +43,18 @@ const Chat = () => {
         // const message = concatenateWithLineNumbers(result.answer);
 
         //TODO change this according to API return
-        let newText = result.map((item, i) => (
+        let newText = result.answer.map((item, i) => (
           <div>
             <p key={i}>
-              {i}. {item.name}
+              {i + 1}. {item.name}
             </p>
-            <p key={i + 100}>{item.url}</p>
-            <p key={i + 1000}>{item.price}</p>
+            <p key={i + 100}>
+              <a href={item.url} target="_blank">
+                {item.url}
+              </a>
+            </p>
+            <p key={i + 1000}>Price: Rs.{item.price} /-</p>
+            <Divider />
           </div>
         ));
         setMessages([
