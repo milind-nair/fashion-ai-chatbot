@@ -123,7 +123,7 @@ const Chat = () => {
                   <React.Fragment key={index}>
                     <img
                       src={message.thumbnailImageUrl}
-                      alt="Recommended Product Image"
+                      alt="Recommended Product"
                     />
                     <ListItem alignItems="flex-start">
                       <ListItemIcon
