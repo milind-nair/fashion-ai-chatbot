@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fashion-ai-chatbot/frontend/static/css/main.e6c13ad2.css",
-    "main.js": "/fashion-ai-chatbot/frontend/static/js/main.5b3c20da.js",
-    "static/js/787.cda612ba.chunk.js": "/fashion-ai-chatbot/frontend/static/js/787.cda612ba.chunk.js",
-    "index.html": "/fashion-ai-chatbot/frontend/index.html",
-    "main.e6c13ad2.css.map": "/fashion-ai-chatbot/frontend/static/css/main.e6c13ad2.css.map",
-    "main.5b3c20da.js.map": "/fashion-ai-chatbot/frontend/static/js/main.5b3c20da.js.map",
-    "787.cda612ba.chunk.js.map": "/fashion-ai-chatbot/frontend/static/js/787.cda612ba.chunk.js.map"
+    "main.css": "/fashion-ai-chatbot/static/css/main.e6c13ad2.css",
+    "main.js": "/fashion-ai-chatbot/static/js/main.df70f0dc.js",
+    "static/js/787.cda612ba.chunk.js": "/fashion-ai-chatbot/static/js/787.cda612ba.chunk.js",
+    "index.html": "/fashion-ai-chatbot/index.html",
+    "main.e6c13ad2.css.map": "/fashion-ai-chatbot/static/css/main.e6c13ad2.css.map",
+    "main.df70f0dc.js.map": "/fashion-ai-chatbot/static/js/main.df70f0dc.js.map",
+    "787.cda612ba.chunk.js.map": "/fashion-ai-chatbot/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.5b3c20da.js"
+    "static/js/main.df70f0dc.js"
   ]
 }
