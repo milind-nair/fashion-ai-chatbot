@@ -31,15 +31,15 @@ const Chat = () => {
       handleSendMessage();
     }
   };
-  const concatenateWithLineNumbers = (arr) => {
-    let result = "";
+  // const concatenateWithLineNumbers = (arr) => {
+  //   let result = "";
 
-    for (let i = 0; i < arr.length; i++) {
-      result += `${i + 1}. ${arr[i]}\n`;
-    }
+  //   for (let i = 0; i < arr.length; i++) {
+  //     result += `${i + 1}. ${arr[i]}\n`;
+  //   }
 
-    return result;
-  };
+  //   return result;
+  // };
   const handleSendMessage = async () => {
     if (inputValue.trim() !== "") {
       try {
@@ -48,16 +48,17 @@ const Chat = () => {
           history: conversations.filter((elem) => elem.name === currentUser)[0]
             .history,
         };
-        console.log(jsonToSend);
-        // const result = await makePostRequest(urlToCall, jsonData);
         const result = await makePostRequest(urlToCall, jsonToSend);
-        const message = concatenateWithLineNumbers(result.answer);
+        // const message = concatenateWithLineNumbers(result.answer);
+
+        //TODO change this according to API return
+        let newText = result.map((item, i) => <p key={i}>{item.name}</p>);
         setMessages([
           ...messages,
           { user: currentUser, message: inputValue, type: "question" },
           {
             user: currentUser,
-            message: message,
+            message: newText,
             type: "answer",
           },
         ]);
@@ -126,10 +127,12 @@ const Chat = () => {
                       >
                         <SmartToyIcon />
                       </ListItemIcon>
-                      <ListItemText
+                      <div style={{ textAlign: "left" }}>{message}</div>
+
+                      {/* <ListItemText
                         primary={message.message}
                         style={{ textAlign: "left" }}
-                      />
+                      /> */}
                     </ListItem>
                     <Divider />
                   </React.Fragment>
