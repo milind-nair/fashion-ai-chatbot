@@ -59,7 +59,6 @@ const Chat = () => {
             user: currentUser,
             message: newText,
             type: "answer",
-            thumbnailImageUrl: "",
           },
         ]);
       } catch (error) {
@@ -121,10 +120,10 @@ const Chat = () => {
                 }
                 return (
                   <React.Fragment key={index}>
-                    <img
+                    {/* <img
                       src={message.thumbnailImageUrl}
                       alt="Recommended Product"
-                    />
+                    /> */}
                     <ListItem alignItems="flex-start">
                       <ListItemIcon
                         sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}
