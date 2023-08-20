@@ -31,15 +31,6 @@ const Chat = () => {
       handleSendMessage();
     }
   };
-  // const concatenateWithLineNumbers = (arr) => {
-  //   let result = "";
-
-  //   for (let i = 0; i < arr.length; i++) {
-  //     result += `${i + 1}. ${arr[i]}\n`;
-  //   }
-
-  //   return result;
-  // };
   const handleSendMessage = async () => {
     if (inputValue.trim() !== "") {
       try {
@@ -52,7 +43,15 @@ const Chat = () => {
         // const message = concatenateWithLineNumbers(result.answer);
 
         //TODO change this according to API return
-        let newText = result.map((item, i) => <p key={i}>{item.name}</p>);
+        let newText = result.map((item, i) => (
+          <div>
+            <p key={i}>
+              {i}. {item.name}
+            </p>
+            <p key={i + 100}>{item.url}</p>
+            <p key={i + 1000}>{item.price}</p>
+          </div>
+        ));
         setMessages([
           ...messages,
           { user: currentUser, message: inputValue, type: "question" },
@@ -60,6 +59,7 @@ const Chat = () => {
             user: currentUser,
             message: newText,
             type: "answer",
+            thumbnailImageUrl: "",
           },
         ]);
       } catch (error) {
@@ -121,6 +121,10 @@ const Chat = () => {
                 }
                 return (
                   <React.Fragment key={index}>
+                    <img
+                      src={message.thumbnailImageUrl}
+                      alt="Recommended Product Image"
+                    />
                     <ListItem alignItems="flex-start">
                       <ListItemIcon
                         sx={{ marginBottom: 1, marginLeft: 2, mt: 0 }}
