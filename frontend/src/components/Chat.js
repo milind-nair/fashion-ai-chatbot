@@ -131,7 +131,7 @@ const Chat = () => {
                       >
                         <SmartToyIcon />
                       </ListItemIcon>
-                      <div style={{ textAlign: "left" }}>{message}</div>
+                      <div style={{ textAlign: "left" }}>{message.message}</div>
 
                       {/* <ListItemText
                         primary={message.message}
